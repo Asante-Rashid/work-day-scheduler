@@ -17,8 +17,71 @@
         <p class="lead">A simple calendar app for scheduling your work day</p>
         <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-        <!-- Timeblocks go here -->
+    <div class="container text-center">
+        <div class="row mt-3 h-25">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 pt-2 border-top border-bottom">9AM</div>
+            <!-- subtractive border not working -->
+            <div class="col-md-8 border pt-2">Event Space</div>
+            <div class="col-md-1 btn btn-primary">Save</div>
+            <div class="col-md-1"></div>
+          </div>
+        <div class="row h-25">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 pt-2 border-top border-bottom">10AM</div>
+            <div class="col-md-8 border pt-2">Event Space</div>
+            <div class="col-md-1 btn btn-primary">Save</div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row h-25">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 pt-2 border-top border-bottom">11AM</div>
+            <div class="col-md-8 border pt-2">Event Space</div>
+            <div class="col-md-1 btn btn-primary">Save</div>
+            <div class="col-md-1"></div>
+          </div>
+        <div class="row h-25">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 pt-2 border-top border-bottom">12PM</div>
+            <div class="col-md-8 border pt-2">Event Space</div>
+            <div class="col-md-1 btn btn-primary">Save</div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row h-25">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 pt-2 border-top border-bottom">1PM</div>
+            <div class="col-md-8 border pt-2">Event Space</div>
+            <div class="col-md-1 btn btn-primary">Save</div>
+            <div class="col-md-1"></div>
+          </div>
+        <div class="row h-25">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 pt-2 border-top border-bottom">2PM</div>
+            <div class="col-md-8 border pt-2">Event Space</div>
+            <div class="col-md-1 btn btn-primary">Save</div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row h-25">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 pt-2 border-top border-bottom">3PM</div>
+            <div class="col-md-8 border pt-2">Event Space</div>
+            <div class="col-md-1 btn btn-primary">Save</div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row h-25">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 pt-2 border-top border-bottom">4PM</div>
+            <div class="col-md-8 border pt-2">Event Space</div>
+            <div class="col-md-1 btn btn-primary">Save</div>
+            <div class="col-md-1"></div>
+          </div>
+        <div class="row h-25">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 pt-2 border-top border-bottom">5PM</div>
+            <div class="col-md-8 border pt-2">Event Space</div>
+            <div class="col-md-1 btn btn-primary">Save</div>
+            <div class="col-md-1"></div>
+        </div>
     </div>
 
     <!-- minified jquery 3.5.1 CDN link -->
@@ -32,6 +95,10 @@
 
     <script type="text/javascript">
     // Main code goes here
+    import isToday from "date-fns";
+    console.log(isToday(date));
+     var dateToday = format(new Date(), "cccc LLLL d, yyyy");
+     console.log(dateToday);
     </script>
 </body>
 
