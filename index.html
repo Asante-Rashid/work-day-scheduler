@@ -22,8 +22,8 @@
             <div class="col-md-1"></div>
             <div class="col-md-1 pt-2 border-top border-bottom">9AM</div>
             <!-- subtractive border not working -->
-            <input  class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
-            <div class="col-md-1 btn btn-primary">Save</div>
+            <input  class="col-md-8 border pt-2 event-9" placeholder="Event-Space"></input>
+            <button class="col-md-1 btn btn-primary" time-frame = "9">Save</button>
             <div class="col-md-1"></div>
         </div>
         <div class="row h-25">
@@ -97,13 +97,12 @@
 
     <script type="text/javascript">
 
-        var saveButton = $("#btn")
-
-        saveButton.addEventListener("click", function (event) {
-            event.preventDefault();
-
-            var eventSpave = $("#event").value;
-        }
+            $("button").on("click", function () {
+            // event.preventDefault();
+            // var timeFrame = $(this).attr("time-frame");
+            // var eventSpace = $("#event" +"-"+ timeframe).value;
+            console.log("test")
+        });
     </script>
 </body>
 
