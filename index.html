@@ -22,63 +22,63 @@
             <div class="col-md-1"></div>
             <div class="col-md-1 pt-2 border-top border-bottom">9AM</div>
             <!-- subtractive border not working -->
-            <input  class="col-md-8 border pt-2 event-9" placeholder="Event-Space"></input>
-            <button class="col-md-1 btn btn-primary" time-frame = "9">Save</button>
+            <input class="col-md-8 border pt-2 event-9" placeholder="Event-Space"></input>
+            <button class="col-md-1 btn btn-primary" time-frame="9">Save</button>
             <div class="col-md-1"></div>
         </div>
         <div class="row h-25">
             <div class="col-md-1"></div>
             <div class="col-md-1 pt-2 border-top border-bottom">10AM</div>
-            <input  class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
+            <input class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
             <div class="col-md-1 btn btn-primary">Save</div>
             <div class="col-md-1"></div>
         </div>
         <div class="row h-25">
             <div class="col-md-1"></div>
             <div class="col-md-1 pt-2 border-top border-bottom">11AM</div>
-            <input  class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
+            <input class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
             <div class="col-md-1 btn btn-primary">Save</div>
             <div class="col-md-1"></div>
         </div>
         <div class="row h-25">
             <div class="col-md-1"></div>
             <div class="col-md-1 pt-2 border-top border-bottom">12PM</div>
-            <input  class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
+            <input class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
             <div class="col-md-1 btn btn-primary">Save</div>
             <div class="col-md-1"></div>
         </div>
         <div class="row h-25">
             <div class="col-md-1"></div>
             <div class="col-md-1 pt-2 border-top border-bottom">1PM</div>
-            <input  class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
+            <input class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
             <div class="col-md-1 btn btn-primary">Save</div>
             <div class="col-md-1"></div>
         </div>
         <div class="row h-25">
             <div class="col-md-1"></div>
             <div class="col-md-1 pt-2 border-top border-bottom">2PM</div>
-            <input  class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
+            <input class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
             <div class="col-md-1 btn btn-primary">Save</div>
             <div class="col-md-1"></div>
         </div>
         <div class="row h-25">
             <div class="col-md-1"></div>
             <div class="col-md-1 pt-2 border-top border-bottom">3PM</div>
-            <input  class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
+            <input class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
             <div class="col-md-1 btn btn-primary">Save</div>
             <div class="col-md-1"></div>
         </div>
         <div class="row h-25">
             <div class="col-md-1"></div>
             <div class="col-md-1 pt-2 border-top border-bottom">4PM</div>
-            <input  class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
+            <input class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
             <div class="col-md-1 btn btn-primary">Save</div>
             <div class="col-md-1"></div>
         </div>
         <div class="row h-25">
             <div class="col-md-1"></div>
             <div class="col-md-1 pt-2 border-top border-bottom">5PM</div>
-            <input  class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
+            <input class="col-md-8 border pt-2 event" placeholder="Event Space"></input>
             <div class="col-md-1 btn btn-primary">Save</div>
             <div class="col-md-1"></div>
         </div>
@@ -91,13 +91,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
-    <!-- CDN for date-fns... i think -->
-    <!-- moment.js can still be used btw -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
+    
+    <!-- moment.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
     <script type="text/javascript">
-
-            $("button").on("click", function () {
+        var todaysDate = moment().format("MMM Do YYYY");
+        console.log(todaysDate);
+        $("#currentDay").append(todaysDate);
+     
+        $("button").on("click", function () {
             // event.preventDefault();
             // var timeFrame = $(this).attr("time-frame");
             // var eventSpace = $("#event" +"-"+ timeframe).value;
