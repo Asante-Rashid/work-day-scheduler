@@ -22,7 +22,7 @@
             <div class="col-md-1"></div>
             <div class="col-md-1 pt-2 border-top border-bottom">9AM</div>
             <!-- subtractive border not working -->
-            <input id="9AM" class="col-md-8 border pt-2" placeholder="Event-Space"></input>
+            <input id="9AM" class="col-md-8 border pt-2 event" placeholder="Event-Space"></input>
             <button class="col-md-1 btn btn-primary" time-frame="9">Save</button>
             <div class="col-md-1"></div>
         </div>
@@ -96,27 +96,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
     <script type="text/javascript">
-        var todaysDate = moment().format("MMM Do YYYY");
-        // console.log(todaysDate);
-        $("#currentDay").append(todaysDate);
+        // test code //////////////////////////////////////////////
+        var now = moment();
+        var morning = moment().set("hour", 3);
+        
+        if (morning.isBefore(now)) { console.log("test") };
 
+        console.log(now)
+        console.log(morning)
+        $(".event").css("background-color", "#f2f2f2")
+
+        // working code //////////////////////////////////////////
+        // sets current date /////////////////////////////////////
+        var todaysDate = moment().format("MMM Do YYYY");
+        $("#currentDay").append(todaysDate);
+        
+        // renders schedule from local storage ///////////////////
         renderSchedule();
 
         function renderSchedule() {
             var nineInit = localStorage.getItem("event9");
-console.log(nineInit)
             $("#9AM").val(nineInit);
         }
 
-
+        // button click event ///////////////////////////////////
         $("button").on("click", function () {
             var event = $("#9AM").val();
-            console.log(event);
             localStorage.setItem("event9", event)
-            // jQuery.data(event, "test", event);
-            // console.log($(this).parent().children())
+
         });
+
     </script>
 </body>
 
 </html>
+<!-- need to get the id to sumbers 9-5. The i can create an array and loop through the id names  -->
